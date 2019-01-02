@@ -16,9 +16,9 @@ export class AppComponent implements OnInit,OnChanges{
     this.currentComponent = '';
   }
 
-  ngOnChanges(changes:SimpleChanges):void {
+  ngOnChanges(changes: SimpleChanges):void {
 
-    console.log('[ngOnChanges]',SimpleChanges);
+    console.log('[ngOnChanges]',changes);
   }
 
 
