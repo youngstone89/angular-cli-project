@@ -16,8 +16,21 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
+  <li>
+    <h2><button (click)="changeComponent('rx-subject',$event);">Rx Subject Component</button></h2>
+  </li>
+  <li>
+    <h2><button (click)="changeComponent('rx-promise',$event);">Rx Promise Component</button></h2>
+  </li>
 </ul>
 
-<app-rx-subject>
-
+<app-rx-subject
+*ngIf="currentComponent!=undefined && currentComponent=='rx-subject'"
+>
 </app-rx-subject>
+
+<app-rx-promise
+  *ngIf="currentComponent!=undefined && currentComponent=='rx-promise'">
+
+
+</app-rx-promise>

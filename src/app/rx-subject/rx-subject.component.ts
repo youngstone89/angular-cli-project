@@ -32,6 +32,7 @@ export class RxSubjectComponent implements OnInit, OnDestroy {
         // this._behaviorSubject.next(Math.random());
         // this._replaySubject.next(Math.random());
       this._asyncSubject.next(Math.random());
+      console.log('[Foo Loop]',i);
     }
 
     // this._replaySubject.subscribe((data) => {
@@ -43,8 +44,9 @@ export class RxSubjectComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this._subject.unsubscribe();
-    this._behaviorSubject.unsubscribe();
+    // this._subject.unsubscribe();
+    // this._behaviorSubject.unsubscribe();
+    this._asyncSubject.unsubscribe();
   }
 
   initObservable() {
