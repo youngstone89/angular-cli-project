@@ -3,10 +3,20 @@
 </p>
 
 
+<!--AS IS-->
+<!--<div>-->
+  <!--<H2>Key Up Search using Promise</H2>-->
+  <!--<input #term type="text" (keyup)="search(term.value)">-->
+  <!--<hr>-->
+  <!--<div *ngIf="results.length > 0">-->
+    <!--<li *ngFor="let result of results">{{ result.name }} is a character with a height of {{ result.height }}.</li>-->
+  <!--</div>-->
+<!--</div>-->
 
+<!--TO BE-->
 <div>
-  <H2>Key Up Search using Promise</H2>
-  <input #term type="text" (keyup)="search(term.value)">
+  <h2>Star Wars Character Search</h2>
+  <input [formControl]="term">
   <hr>
   <div *ngIf="results.length > 0">
     <li *ngFor="let result of results">{{ result.name }} is a character with a height of {{ result.height }}.</li>
