@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Rx from "rxjs";
-import {toPromise} from 'rxjs/operator/toPromise';
+import {HttpClient} from '@angular/common/http';
 
 
 
@@ -15,8 +15,9 @@ import {toPromise} from 'rxjs/operator/toPromise';
   styleUrls: ['./rx-promise.component.css']
 })
 export class RxPromiseComponent implements OnInit {
+  public results = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
   }
 
@@ -40,4 +41,17 @@ export class RxPromiseComponent implements OnInit {
     });
   }
 
+  public search(term){
+    console.log('[term]', term);
+    this.http.get(`https://swapi.co/api/people/?search=${term}`)
+      .toPromise()
+      .then((data: any) => {
+        console.time('request-length');
+        console.log(data);
+        console.timeEnd('request-length');
+        this.results = data.results;
+      });
+  }
+
 }
+

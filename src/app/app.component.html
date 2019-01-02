@@ -22,6 +22,9 @@
   <li>
     <h2><button (click)="changeComponent('rx-promise',$event);">Rx Promise Component</button></h2>
   </li>
+  <li>
+    <h2><button (click)="changeComponent('async-await',$event);">Async Await Component</button></h2>
+  </li>
 </ul>
 
 <app-rx-subject
@@ -31,6 +34,10 @@
 
 <app-rx-promise
   *ngIf="currentComponent!=undefined && currentComponent=='rx-promise'">
-
-
 </app-rx-promise>
+
+<app-async-await
+  *ngIf="currentComponent!=undefined && currentComponent=='async-await'">
+>
+
+</app-async-await>

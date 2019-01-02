@@ -1,3 +1,14 @@
 <p>
   rx-promise works!
 </p>
+
+
+
+<div>
+  <H2>Key Up Search using Promise</H2>
+  <input #term type="text" (keyup)="search(term.value)">
+  <hr>
+  <div *ngIf="results.length > 0">
+    <li *ngFor="let result of results">{{ result.name }} is a character with a height of {{ result.height }}.</li>
+  </div>
+</div>
