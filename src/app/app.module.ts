@@ -8,6 +8,7 @@ import { RxPromiseComponent } from './rx-promise/rx-promise.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { JqueryPluginComponent } from './jquery-plugin/jquery-plugin.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     RxSubjectComponent,
     RxPromiseComponent,
     AsyncAwaitComponent,
+    JqueryPluginComponent,
   ],
   imports: [
     BrowserModule,
