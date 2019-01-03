@@ -25,6 +25,9 @@
   <li>
     <h2><button (click)="changeComponent('async-await',$event);">Async Await Component</button></h2>
   </li>
+  <li>
+    <h2><button (click)="changeComponent('jquery-plugin',$event);">Jquery Plugin Component</button></h2>
+  </li>
 </ul>
 
 <app-rx-subject
@@ -41,3 +44,10 @@
 >
 
 </app-async-await>
+
+
+<app-jquery-plugin
+  *ngIf="currentComponent!=undefined && currentComponent=='jquery-plugin'">
+  >
+
+</app-jquery-plugin>
